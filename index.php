@@ -10,9 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$usersubject = filter_var($_POST['subject'],FILTER_SANITIZE_STRING);
 	$usermessage = filter_var($_POST['message'],FILTER_SANITIZE_STRING);
 
-	// creation tableau erreurs
-
-	// $errors = array();
+	// creating array errors
 
 	$usernameError = "";
 	$EmailError   = "";
