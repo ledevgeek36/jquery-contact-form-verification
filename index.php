@@ -12,8 +12,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	// $errors = array();
 
-	$LoginError = "";
-	$PassError = "";
+	$usernameError = "";
+	$$EmailError   = "";
+	$SubjectError  = "";
+	$MessageError  = "";
 
 	
 if($username == ''){
@@ -23,17 +25,17 @@ if($username == ''){
 
 	if($useremail == ''){
 
-		$PassError = 'Error: Please enter email.';
+		$EmailError = 'Error: Please enter email.';
 	}
 	
 	if($usersubject == ''){
 
-		$PassError = 'Error: Please enter subject.';
+		$SubjectError = 'Error: Please enter subject.';
 	}
 	
 	if($usermessage == ''){
 
-		$PassError = 'Error: Please enter message.';
+		$MessageError = 'Error: Please enter message.';
 	}else{
 		
 	$recipient = "your@email.com";
