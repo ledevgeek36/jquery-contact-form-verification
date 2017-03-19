@@ -5,15 +5,17 @@
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	// assign variable
-	$email = filter_var($_POST['login'],FILTER_VALIDATE_EMAIL);
-	$password = filter_var($_POST['passwd'],FILTER_SANITIZE_STRING);
+	$username = filter_var($_POST['username'],FILTER_VALIDATE_STRING);
+	$useremail = filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
+	$usersubject = filter_var($_POST['subject'],FILTER_SANITIZE_STRING);
+	$usermessage = filter_var($_POST['message'],FILTER_SANITIZE_STRING);
 
 	// creation tableau erreurs
 
 	// $errors = array();
 
 	$usernameError = "";
-	$$EmailError   = "";
+	$EmailError   = "";
 	$SubjectError  = "";
 	$MessageError  = "";
 
