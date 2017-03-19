@@ -16,16 +16,31 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$PassError = "";
 
 	
-if($email == ''){
+if($username == ''){
 
-		$LoginError = 'Error: Please enter Username or Email.';
+		$usernameError = 'Error: Please enter you name.';
 	}
 
-	if($password == ''){
+	if($useremail == ''){
 
-		$PassError = 'Error: Please enter Username or Email.';
+		$PassError = 'Error: Please enter email.';
 	}
-		// if no error send mail
+	
+	if($usersubject == ''){
+
+		$PassError = 'Error: Please enter subject.';
+	}
+	
+	if($usermessage == ''){
+
+		$PassError = 'Error: Please enter message.';
+	}else{
+		
+	$recipient = "your@email.com";
+	$email   = $_POST['email'];
+	$subject   = $_POST['subject'];
+	$message   = $_POST['message'];
+	mail($recipient,$email,$subject,$message);
 
 	
 }
